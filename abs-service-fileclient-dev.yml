@@ -62,8 +62,8 @@ spring:
 ---
 #FastDFS配置
 fdfs:
-  connect_timeout: 2
-  network_timeout: 300
+  connect_timeout: 5000
+  network_timeout: 10000
   charset: UTF-8
   http:
     tracker_http_port: 8080
