@@ -13,15 +13,6 @@ custom:
     redirect-flg: false # false表示打开http端口时不自动跳转到https
 
 ---
-#eureka: #服务注册
-#  instance:
-##    prefer-ip-address: true
-#    hostname: localhost
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:1111/eureka/
-
----
 logging:
   config: classpath:dev/log4j2.xml
 
@@ -67,3 +58,15 @@ spring:
     password: spcs
     publisher-confirms: true
     virtual-host: /
+
+---
+#FastDFS配置
+fdfs:
+  connect_timeout: 2
+  network_timeout: 300
+  charset: UTF-8
+  http:
+    tracker_http_port: 8080
+    anti_steal_token: no
+    secret_key: FastDFS1234567890
+  tracker_servers: 40.125.171.31:22122 #多个用逗号隔开
