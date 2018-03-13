@@ -1,2 +1,6 @@
 encrypt:
   fail-on-error: false
+
+api.path:
+    test:
+      root: /test
