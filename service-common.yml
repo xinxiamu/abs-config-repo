@@ -7,9 +7,9 @@ api: #测试加解密
 
 ---
 ## controller url配置
-path:
-  test:
-    root: /test
-    test2: ${path.test.root}/test2
-    test3: ${path.test.root}/test3
+#path:
+#  test:
+#    root: /test
+#    test2: ${path.test.root}/test2
+#    test3: ${path.test.root}/test3
 
