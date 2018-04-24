@@ -10,6 +10,6 @@ api: #测试加解密
 path:
   test:
     root: /test
-    test2: ${root}/test2
-    test3: ${root}/test3
+    test2: ${path.test.root}/test2
+    test3: ${path.test.root}/test3
 
