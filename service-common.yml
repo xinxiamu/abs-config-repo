@@ -5,11 +5,4 @@ encrypt:
 api: #测试加解密
   password: '{cipher}AQB0sf3nKuMq6wmRGs1CVDs3Oq+gdkfhX7F4M5txKI0CUpezKl02GI1mWmY4e6Ch/tI0UP9KRLv5VADrF8qESSPrZjD+uQR+op/N1hEZmKOMS/BpgipudiskeuifHPk2ffscN6pJns4VrfRwW3Io9yyOJ0/mAQxD46IcppraE2Z4gwplLvRU0U7pLB2mxpBqhi24ZKUW3MHRRD5rF4AMyXQw9SEyfyXYWpBGxSgMGfeV/TU4d4DVSYy8Y7Ji0Rf41m/59V24bjjYaJL2B77+WLyKlGHlV/hfrCOcz45NgqS00TGjNfieO1DlWHZi/YvYN4UUF0InRFI2gnGzWumEnJSYhHWqO3hdVr9mO+BI8DskngMGapYQrJVc7Pdpo27h3Io='
 
----
-## controller url配置
-#path:
-#  test:
-#    root: /test
-#    test2: ${path.test.root}/test2
-#    test3: ${path.test.root}/test3
 

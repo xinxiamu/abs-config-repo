@@ -1,0 +1,4 @@
+path:
+  fast-dfs-client:
+    root: /fastDFSClient
+    get-file-url: ${path.fast-dfs-client.root}
