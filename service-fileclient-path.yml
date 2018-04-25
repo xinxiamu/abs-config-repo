@@ -1,4 +1,4 @@
 path:
   fastDFSClient:
     root: /fastDFSClient
-    getFileUrl: ${path.fastDFSClient.root}/getFileUrl
+    getFileUrl: ${path.fastDFSClient.root}/getAllFile
