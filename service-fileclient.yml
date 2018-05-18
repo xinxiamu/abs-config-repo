@@ -7,3 +7,8 @@ api:
 api.path:
     test:
       root: /test
+
+--- #messages
+spring:
+  messages:
+    basename: i18n/messages,i18n/errors
