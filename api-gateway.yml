@@ -1,3 +1,7 @@
 encrypt:
   fail-on-error: false
 
+---
+msg:
+  system:
+    error: 系统错误，请求失败
