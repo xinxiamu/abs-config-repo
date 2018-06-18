@@ -12,8 +12,9 @@ app:
   tmp-dir: ${app.external-dir}/${spring.application.name}
 
 #wkhtmltopdf可执行文件路径，转pdf。开发时候自行更改
-wkhtmltopdf:
-  bin-path: ${app.external-dir}/bin/wkhtmltopdf
+wkhtmltox:
+  wkhtmltopdf-path: ${app.external-dir}/wkhtmltox/bin/wkhtmltopdf
+  wkhtmltoimage-path: ${app.external-dir}/wkhtmltox/bin/wkhtmltoimage
 
 ---
 custom:

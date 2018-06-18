@@ -12,10 +12,6 @@ app:
   # 产生的临时文件等都可以放在这里。开发时候自行更改
   tmp-dir: ${app.external-dir}/${spring.application.name}
 
-#wkhtmltopdf可执行文件路径，转pdf。开发时候自行更改
-wkhtmltopdf:
-  bin-path: ${app.external-dir}/bin/wkhtmltopdf
-
 ---
 custom:
   tomcat:
