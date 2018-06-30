@@ -13,19 +13,17 @@ app:
   tmp-dir: ${app.external-dir}/${spring.application.name}
 
 ---
+logging:
+  config: classpath:dev/log4j2.xml
+
+---
+## 自定义变量
 custom:
   tomcat:
     http:
       port: 9015 # http端口
     redirect-flg: false # false表示打开http端口时不自动跳转到https
-
----
-logging:
-  config: classpath:dev/log4j2.xml
-
----
-# cors跨域设置
-custom:
+  # cors跨域设置
   cors:
     mapping: /**
     allowCredentials: false
@@ -40,8 +38,6 @@ custom:
 #  profiles:
 #    include: redis-config-dev,rabbitmq-config-dev
 
----
-#redis
 spring:
   redis:
     # Redis数据库索引（默认为0）
@@ -61,10 +57,7 @@ spring:
         min-idle: 0
     # 连接超时时间（毫秒）
     timeout: 10000
-
----
-#rabbitMq
-spring:
+  #rabbitMq
   rabbitmq:
     host: 192.168.1.152
     port: 5672
