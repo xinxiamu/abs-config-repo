@@ -4,7 +4,6 @@ encrypt:
 spring:
   messages:
     basename: i18n/messages,i18n/errors
-  profiles: redis-config-dev
   profiles:
     include: path
 
