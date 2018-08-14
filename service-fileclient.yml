@@ -8,6 +8,12 @@ api.path:
     test:
       root: /test
 
+datasource:
+  ymu-file: #数据库名称
+    name:
+      master: ymu_file_master
+      slave-1: ymu_file_slave1
+
 --- #messages
 spring:
   messages:
