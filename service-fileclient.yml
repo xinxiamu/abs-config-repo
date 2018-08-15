@@ -9,9 +9,9 @@ api.path:
       root: /test
 
 datasource:
-  ymu-file: #数据库名称
+  ymu-file:
     name:
-      master: ymu_file_master
+      master: ymu_file_master #数据库名称
       slave-1: ymu_file_slave1
 
 --- #messages
