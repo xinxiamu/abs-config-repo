@@ -50,14 +50,15 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: update #生产环境最好none
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
   datasource:
     hikari:
       master: #主库
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://127.0.0.1:3307/ymu_file_master?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+        #生产环境去掉 createDatabaseIfNotExist，太危险。
+        jdbc-url: jdbc:mysql://127.0.0.1:3307/ymu_file_master?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
         username: root
         password: root
         minimum-idle: 5
@@ -70,7 +71,7 @@ spring:
         connection-test-query: SELECT 1
       slave-1:
         driver-class-name: com.mysql.jdbc.Driver
-        jdbc-url: jdbc:mysql://127.0.0.1:3307/ymu_file_slave1?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+        jdbc-url: jdbc:mysql://127.0.0.1:3307/ymu_file_slave1?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
         username: root
         password: root
         minimum-idle: 5
