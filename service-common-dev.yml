@@ -39,6 +39,49 @@ custom:
 #    include: redis-config-dev,rabbitmq-config-dev
 
 spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update #生产环境最好none
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        jpa:
+    properties:
+      hibernate:
+        #        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        dialect: com.ymu.framework.spring.config.CoreMySQLDialect
+  datasource:
+    hikari:
+      master: #主库
+        driver-class-name: com.mysql.jdbc.Driver
+        #生产环境去掉 createDatabaseIfNotExist，太危险。
+        jdbc-url: jdbc:mysql://127.0.0.1:3307/ymu_dic_master?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+        username: root
+        password: root
+        minimum-idle: 5
+        maximum-pool-size: 15
+        auto-commit: true
+        idle-timeout: 30000
+        pool-name: DatebookHikariCP
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        connection-test-query: SELECT 1
+      slave-1:
+        driver-class-name: com.mysql.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3307/ymu_dic_slave1?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+        username: root
+        password: root
+        minimum-idle: 5
+        maximum-pool-size: 15
+        auto-commit: true
+        idle-timeout: 30000
+        pool-name: DatebookHikariCP
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        connection-test-query: SELECT 1
+        read-only: true #配置只读，无法做写操作.保证安全
   redis:
     # Redis数据库索引（默认为0）
     database: 0
