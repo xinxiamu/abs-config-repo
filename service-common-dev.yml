@@ -68,7 +68,7 @@ spring:
         max-lifetime: 1800000
         connection-timeout: 30000
         connection-test-query: SELECT 1
-      slave-1:
+      slave1:
         driver-class-name: com.mysql.jdbc.Driver
         jdbc-url: jdbc:mysql://192.168.199.102:3911/ymu_common?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
         username: root
@@ -82,7 +82,7 @@ spring:
         connection-timeout: 30000
         connection-test-query: SELECT 1
         read-only: true #配置只读，无法做写操作.保证安全
-      slave-2:
+      slave2:
         driver-class-name: com.mysql.jdbc.Driver
         jdbc-url: jdbc:mysql://192.168.199.103:3912/ymu_common?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
         username: root
