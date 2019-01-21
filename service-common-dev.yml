@@ -116,10 +116,10 @@ spring:
     timeout: 10000
   #rabbitMq
   rabbitmq:
-    host: localhost
+    host: 192.168.55.10
     port: 5672
-    username: spcs
-    password: spcs
+    username: ymu
+    password: 123456
     publisher-confirms: true
-    virtual-host: /
+    virtual-host: ymu_vhost
 
