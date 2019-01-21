@@ -120,6 +120,6 @@ spring:
     port: 5672
     username: ymu
     password: 123456
-    publisher-confirms: true
+    publisher-confirms: false
     virtual-host: ymu_vhost
 
