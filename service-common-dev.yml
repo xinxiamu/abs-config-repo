@@ -118,8 +118,8 @@ spring:
   rabbitmq:
     host: 192.168.55.10
     port: 5672
-    username: ymu
+    username: zmt
     password: 123456
-    publisher-confirms: false
-    virtual-host: ymu_vhost
+    publisher-confirms: true
+    virtual-host: /
 
