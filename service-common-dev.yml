@@ -116,7 +116,7 @@ spring:
     timeout: 10000
   #rabbitMq
   rabbitmq:
-    host: localhost
+    host: 192.168.55.10
     port: 5672
     username: testuser
     password: a1234567
