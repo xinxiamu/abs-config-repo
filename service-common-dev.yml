@@ -118,8 +118,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: zmt
-    password: 123456
+    username: testuser
+    password: a1234567
     publisher-confirms: true
-    virtual-host: ymu_vhost
+    virtual-host: /
 
