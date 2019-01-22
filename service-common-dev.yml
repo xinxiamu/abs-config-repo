@@ -121,5 +121,5 @@ spring:
     username: zmt
     password: 123456
     publisher-confirms: true
-    virtual-host: ymu
+    virtual-host: ymu_vhost
 
